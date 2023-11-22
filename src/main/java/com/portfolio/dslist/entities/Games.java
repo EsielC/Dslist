@@ -16,22 +16,26 @@ public class Games {
     @Column(name = "game_year") // customiza o nome da coluna no banco de dados h2
     private int year;
     private String genre;
-    private String plataforms;
+    private String platforms;
     private Double score;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     //Construtor Sem Argumentos
     public Games(){
     }
 
-    public Games(Long id, String title, int year, String genre, String plataforms, Double score, String imgUrl, String shortDescription, String longDescription) {
+    public Games(Long id, String title, int year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
         year = year;
         this.genre = genre;
-        this.plataforms = plataforms;
+        this.platforms = platforms;
         this.score = score;
         this.imgUrl = imgUrl;
         this.shortDescription = shortDescription;
@@ -70,12 +74,12 @@ public class Games {
         this.genre = genre;
     }
 
-    public String getPlataforms() {
-        return plataforms;
+    public String getPlatforms() {
+        return platforms;
     }
 
-    public void setPlataforms(String plataforms) {
-        this.plataforms = plataforms;
+    public void setPlatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public Double getScore() {
